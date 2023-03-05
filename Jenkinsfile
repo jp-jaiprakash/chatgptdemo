@@ -1,3 +1,5 @@
+#!/bin/bash -l
+
 pipeline {
     agent any
 
