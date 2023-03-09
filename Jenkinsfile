@@ -24,19 +24,19 @@ pipeline {
 
         stage('Compile') {
             steps {
-                sh 'mvn compile'
+                sh '${MAVEN_HOME}/bin/mvn compile'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh '${MAVEN_HOME}/bin/mvn test'
             }
         }
 
         stage('Package') {
             steps {
-                sh 'mvn package'
+                sh '${MAVEN_HOME}/bin/mvn package'
             }
         }
 
