@@ -6,6 +6,7 @@ pipeline {
     environment {
         DOCKER_IMAGE_NAME = 'my-app'
         DOCKER_IMAGE_TAG = 'latest'
+        MAVEN_HOME = '/Users/jaiprakash/Downloads/apache-maven-3.9.0'
     }
 
     stages {
@@ -17,7 +18,7 @@ pipeline {
 
         stage('Clean') {
             steps {
-                sh 'mvn clean'
+            sh "${MAVEN_HOME}/bin/mvn clean"
             }
         }
 
